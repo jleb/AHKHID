@@ -9,8 +9,8 @@ All the API calls that AHKHID wraps can be found here:
 http://msdn.microsoft.com/en-us/library/ms645543.aspx
 
 AHKHID includes three examples:
-* [Example 1](examples/example_1) lists all the HID devices currently connected
-to your computer
-* [Example 2](examples/example_2) allows you to register for input from any HID
-device and display the incoming data
-* [Example 3](examples/example_3) shows how the mouse can be registered
+* [Example 1](examples/example_1.ahk) lists all the HID devices currently
+connected to your computer
+* [Example 2](examples/example_2.ahk) allows you to register for input from any
+HID device and display the incoming data
+* [Example 3](examples/example_3.ahk) shows how the mouse can be registered
