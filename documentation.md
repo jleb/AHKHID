@@ -5,7 +5,7 @@ This document contains all the information you need to use it.
 
 ## Table of Contents ##
 
-[How do I map buttons on my keyboard/mouse/device?]()
+[How do I map buttons on my keyboard/mouse/device?](#How-do-I-map-buttons-on-my-keyboard/mouse/device?)
 
 Reference
 * [Function List]()
@@ -30,38 +30,38 @@ Once you know what that keyboard/mouse/HID button press generates, there are dif
 
 ## Function List ##
 
-HID_Initialize(bRefresh = False)
+### HID_Initialize(bRefresh = False) ###
 
 You don't have to call this function manually. It is automatically called by other functions to get the pointer of the
 RAWINPUTDEVICELIST struct array. However, if a new device is plugged in, you will have to refresh the listing by calling it
 with bRefresh = True. Returns -1 on error.
 
-HID_GetDevCount()
+### HID_GetDevCount() ###
 
 Returs the number of HID devices connected to this computer. Returns -1 on error.
 
-HID_GetDevHandle(i)
+### HID_GetDevHandle(i) ###
 
 Returns the handle of device i (starts at 1). Mostly used internally for API calls.
 
-HID_GetDevIndex(Handle)
+### HID_GetDevIndex(Handle) ###
 
 Returns the index (starts at 1) of the device in the enumeration with matching handle.
 Returns 0 if not found.
 
-HID_GetDevType(i, IsHandle = False)
+### HID_GetDevType(i, IsHandle = False) ###
 
 Returns the type of the device. See the RIM_ constants for possible values.
 If IsHandle is false, then i is considered the index (starts at 1) of the device in the enumeration.
 Otherwise it is the handle of the device.
 
-HID_GetDevName(i, IsHandle = False)
+### HID_GetDevName(i, IsHandle = False) ###
 
 Returns the name of the device (or empty string on error).
 If IsHandle is false, then i is considered the index (starts at 1) of the device in the enumeration.
 Otherwise it is the handle of the device.
 
-HID_GetDevInfo(i, Flag, IsHandle = False)
+### HID_GetDevInfo(i, Flag, IsHandle = False) ###
 
 Retrieves info from the RID_DEVICE_INFO struct. To retrieve a member, simply use the corresponding flag. A list of flags
 can be found at the top of the script (the constants starting with DI_). Each flag corresponds to a member in the struct.
@@ -69,7 +69,7 @@ See Example 1 for an example on how to use it.
 If IsHandle is false, then i is considered the index (starts at 1) of the device in the enumeration.
 Otherwise it is the handle of the device.
 
-HID_AddRegister(UsagePage = False, Usage = False, Handle = False, Flags = 0)
+### HID_AddRegister(UsagePage = False, Usage = False, Handle = False, Flags = 0) ###
 
 Allows you to queue up RAWINPUTDEVICE structures before doing the registration. To use it, you first need to initialize the
 var by calling HID_AddRegister(iNumberOfElements). To then add to the stack, simply call it with the parameters you want
@@ -87,19 +87,19 @@ Tip: Set Handle to 0 if you want the WM_INPUT messages to go to the window with 
 Tip: To unregister, use the flag RIDEV_REMOVE. Note that you also need to use the RIDEV_PAGEONLY flag if the TLC was
 registered with it.
 
-HID_Register(UsagePage = False, Usage = False, Handle = False, Flags = 0)
+### HID_Register(UsagePage = False, Usage = False, Handle = False, Flags = 0) ###
 
 This function can be used in two ways. If no parameters are specified, it will use the RAWINPUTDEVICE array created through
 HID_AddRegister() and register. Otherwise, it will register only the specified parameters. For example, if you just want to
 register the mouse, you can simply do HID_Register(1,2,MyGuiHandle). See Example 3 for such a simple scenario.
 
-HID_GetRegisteredDevs(ByRef uDev)
+### HID_GetRegisteredDevs(ByRef uDev) ###
 
 This function allows you to get an array of the TLCs that have already been registered.
 It fills uDev with an array of RAWINPUTDEVICE and returns the number of elements in the array.
 Returns -1 on error. See Example 2 for an example on how to use it.
 
-HID_GetInputInfo(InputHandle, Flag)
+### HID_GetInputInfo(InputHandle, Flag) ###
 
 This function is used to retrieve the data upon receiving WM_INPUT messages. By passing the lParam of the WM_INPUT (0xFF00)
 messages, it can retrieve all the members of the RAWINPUT structure, except the raw data coming from HID devices (use
@@ -110,7 +110,7 @@ See Example 2 for an example on how to use it. See Example 3 for an example on h
 Tip: You have to use Critical in your message function or you might get invalid handle errors.
 Tip: You can check the value of wParam to know if the application was in the foreground upon reception (see RIM_INPUT).
 
-HID_GetInputData(InputHandle, ByRef uData)
+### HID_GetInputData(InputHandle, ByRef uData) ###
 
 This function is used to retrieve the data sent by HID devices of type RIM_TYPEHID (ie. neither keyboard nor mouse) upon
 receiving WM_INPUT messages. CAUTION: it does not check if the device is indeed of type HID. It is up to you to do so (you
