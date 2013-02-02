@@ -100,7 +100,7 @@ then i is considered the index (starts at 1) of the device in the enumeration.
 Otherwise it is the handle of the device.
 
 ### HID_AddRegister(UsagePage = False, Usage = False, Handle = False,
-Flags = 0) ###
+### Flags = 0)
 
 Allows you to queue up RAWINPUTDEVICE structures before doing the registration.
 To use it, you first need to initialize the var by calling
