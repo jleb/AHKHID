@@ -5,18 +5,18 @@ This document contains all the information you need to use it.
 
 ## Table of Contents ##
 
-[How do I map buttons on my keyboard/mouse/device?](#How-do-I-map-buttons-on-my-keyboard/mouse/device?)
+[How do I map buttons on my keyboard/mouse/device?](#how-do-i-map-buttons-on-my-keyboardmousedevice)
 
 Reference
-* [Function List]()
-* [Flags for HID_GetDevInfo()]()
-* [Flags for HID_GetInputInfo()]()
-* [Flags for HID_AddRegister() or HID_Register()]()
+* [Function List](#function-list)
+* [Flags for HID_GetDevInfo()](#flags-for-hid_getdevinfo)
+* [Flags for HID_GetInputInfo()](#flags-for-hid_getinputinfo)
+* [Flags for HID_AddRegister() or HID_Register()](#flags-for-hid_addregister-or-hid_register)
 * Raw input flags
-  * [Interpreting II_MSE_FLAGS]()
-  * [Interpreting II_MSE_BUTTONFLAGS]()
-  * [Interpreting II_KBD_FLAGS]()
-* [Other constants]()
+  * [Interpreting II_MSE_FLAGS](#interpreting-ii_mse_flags)
+  * [Interpreting II_MSE_BUTTONFLAGS](#interpreting-ii_mse_buttonflags)
+  * [Interpreting II_KBD_FLAGS](#interpreting-ii_kbd_flags)
+* [Other constants](#other-constants)
 
 ## How do I map buttons on my keyboard/mouse/device? ##
 
