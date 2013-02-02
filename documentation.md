@@ -5,18 +5,18 @@ This document contains all the information you need to use it.
 
 ## Table of Contents ##
 
-[How do I map buttons on my keyboard/mouse/device?][]
+[How do I map buttons on my keyboard/mouse/device?]()
 
 Reference
-* [Function List][]
-* [Flags for HID_GetDevInfo()][]
-* [Flags for HID_GetInputInfo()][]
-* [Flags for HID_AddRegister() or HID_Register()][]
+* [Function List]()
+* [Flags for HID_GetDevInfo()]()
+* [Flags for HID_GetInputInfo()]()
+* [Flags for HID_AddRegister() or HID_Register()]()
 * Raw input flags
-  * [Interpreting II_MSE_FLAGS][]
-  * [Interpreting II_MSE_BUTTONFLAGS][]
-  * [Interpreting II_KBD_FLAGS][]
-* [Other constants][]
+  * [Interpreting II_MSE_FLAGS]()
+  * [Interpreting II_MSE_BUTTONFLAGS]()
+  * [Interpreting II_KBD_FLAGS]()
+* [Other constants]()
 
 ## How do I map buttons on my keyboard/mouse/device? ##
 
@@ -177,72 +177,72 @@ II_HID_DATA         := 24           ;Raw input data as an array of bytes.
 ## Flags for HID_AddRegister() or HID_Register() ##
 
 RIDEV_REMOVE        := 0x00000001   ;If set, this removes the top level collection from the inclusion list. This tells the
-                                    ;operating system to stop reading from a device which matches the top level collection.
+                                    ;operating system to stop reading from a device which matches the top level collection.  
 RIDEV_EXCLUDE       := 0x00000010   ;If set, this specifies the top level collections to exclude when reading a complete
                                     ;usage page. This flag only affects a TLC whose usage page is already specified with
-                                    ;RIDEV_PAGEONLY.
+                                    ;RIDEV_PAGEONLY.  
 RIDEV_PAGEONLY      := 0x00000020   ;If set, this specifies all devices whose top level collection is from the specified
                                     ;usUsagePage. Note that usUsage must be zero. To exclude a particular top level
-                                    ;collection, use RIDEV_EXCLUDE.
+                                    ;collection, use RIDEV_EXCLUDE.  
 RIDEV_NOLEGACY      := 0x00000030   ;If set, this prevents any devices specified by usUsagePage or usUsage from generating
-                                    ;legacy messages. This is only for the mouse and keyboard. See Remarks.
+                                    ;legacy messages. This is only for the mouse and keyboard. See Remarks.  
 RIDEV_INPUTSINK     := 0x00000100   ;If set, this enables the caller to receive the input even when the caller is not in
-                                    ;the foreground. Note that hwndTarget must be specified.
-RIDEV_CAPTUREMOUSE  := 0x00000200   ;If set, the mouse button click does not activate the other window.
+                                    ;the foreground. Note that hwndTarget must be specified.  
+RIDEV_CAPTUREMOUSE  := 0x00000200   ;If set, the mouse button click does not activate the other window.  
 RIDEV_NOHOTKEYS     := 0x00000200   ;If set, the application-defined keyboard device hotkeys are not handled. However, the
                                     ;system hotkeys; for example, ALT+TAB and CTRL+ALT+DEL, are still handled. By default,
                                     ;all keyboard hotkeys are handled. RIDEV_NOHOTKEYS can be specified even if
-                                    ;RIDEV_NOLEGACY is not specified and hwndTarget is NULL.
+                                    ;RIDEV_NOLEGACY is not specified and hwndTarget is NULL.  
 RIDEV_APPKEYS       := 0x00000400   ;Microsoft Windows XP Service Pack 1 (SP1): If set, the application command keys are
                                     ;handled. RIDEV_APPKEYS can be specified only if RIDEV_NOLEGACY is specified for a
-                                    ;keyboard device.
+                                    ;keyboard device.  
 RIDEV_EXINPUTSINK   := 0x00001000   ;Vista only: If set, this enables the caller to receive input in the background only if
                                     ;the foreground application does not process it. In other words, if the foreground
                                     ;application is not registered for raw input, then the background application that is
-                                    ;registered will receive the input.
+                                    ;registered will receive the input.  
 
 ## Interpreting II_MSE_FLAGS ##
 
-MOUSE_MOVE_RELATIVE         := 0     ;Mouse movement data is relative to the last mouse position.
-MOUSE_MOVE_ABSOLUTE         := 1     ;Mouse movement data is based on absolute position.
-MOUSE_VIRTUAL_DESKTOP       := 0x02  ;Mouse coordinates are mapped to the virtual desktop (for a multiple monitor system)
-MOUSE_ATTRIBUTES_CHANGED    := 0x04  ;Mouse attributes changed; application needs to query the mouse attributes.
+MOUSE_MOVE_RELATIVE         := 0     ;Mouse movement data is relative to the last mouse position.  
+MOUSE_MOVE_ABSOLUTE         := 1     ;Mouse movement data is based on absolute position.  
+MOUSE_VIRTUAL_DESKTOP       := 0x02  ;Mouse coordinates are mapped to the virtual desktop (for a multiple monitor system)  
+MOUSE_ATTRIBUTES_CHANGED    := 0x04  ;Mouse attributes changed; application needs to query the mouse attributes.  
 
 ## Interpreting II_MSE_BUTTONFLAGS ##
 
-RI_MOUSE_LEFT_BUTTON_DOWN   := 0x0001   ;Self-explanatory
-RI_MOUSE_LEFT_BUTTON_UP     := 0x0002   ;Self-explanatory
-RI_MOUSE_RIGHT_BUTTON_DOWN  := 0x0004   ;Self-explanatory
-RI_MOUSE_RIGHT_BUTTON_UP    := 0x0008   ;Self-explanatory
-RI_MOUSE_MIDDLE_BUTTON_DOWN := 0x0010   ;Self-explanatory
-RI_MOUSE_MIDDLE_BUTTON_UP   := 0x0020   ;Self-explanatory
-RI_MOUSE_BUTTON_4_DOWN      := 0x0040   ;XBUTTON1 changed to down.
-RI_MOUSE_BUTTON_4_UP        := 0x0080   ;XBUTTON1 changed to up.
-RI_MOUSE_BUTTON_5_DOWN      := 0x0100   ;XBUTTON2 changed to down.
-RI_MOUSE_BUTTON_5_UP        := 0x0200   ;XBUTTON2 changed to up.
-RI_MOUSE_WHEEL              := 0x0400   ;Raw input comes from a mouse wheel. The wheel delta is stored in usButtonData.
+RI_MOUSE_LEFT_BUTTON_DOWN   := 0x0001   ;Self-explanatory  
+RI_MOUSE_LEFT_BUTTON_UP     := 0x0002   ;Self-explanatory  
+RI_MOUSE_RIGHT_BUTTON_DOWN  := 0x0004   ;Self-explanatory  
+RI_MOUSE_RIGHT_BUTTON_UP    := 0x0008   ;Self-explanatory  
+RI_MOUSE_MIDDLE_BUTTON_DOWN := 0x0010   ;Self-explanatory  
+RI_MOUSE_MIDDLE_BUTTON_UP   := 0x0020   ;Self-explanatory  
+RI_MOUSE_BUTTON_4_DOWN      := 0x0040   ;XBUTTON1 changed to down.  
+RI_MOUSE_BUTTON_4_UP        := 0x0080   ;XBUTTON1 changed to up.  
+RI_MOUSE_BUTTON_5_DOWN      := 0x0100   ;XBUTTON2 changed to down.  
+RI_MOUSE_BUTTON_5_UP        := 0x0200   ;XBUTTON2 changed to up.  
+RI_MOUSE_WHEEL              := 0x0400   ;Raw input comes from a mouse wheel. The wheel delta is stored in usButtonData.  
 
 ## Interpreting II_KBD_FLAGS ##
 
-RI_KEY_MAKE             := 0
-RI_KEY_BREAK            := 1
-RI_KEY_E0               := 2
-RI_KEY_E1               := 4
-RI_KEY_TERMSRV_SET_LED  := 8
-RI_KEY_TERMSRV_SHADOW   := 0x10
+RI_KEY_MAKE             := 0  
+RI_KEY_BREAK            := 1  
+RI_KEY_E0               := 2  
+RI_KEY_E1               := 4  
+RI_KEY_TERMSRV_SET_LED  := 8  
+RI_KEY_TERMSRV_SHADOW   := 0x10  
 
 ## Other constants ##
 
 ;Device type values returned by HID_GetDevType() as well as DI_DEVTYPE and II_DEVTYPE
-RIM_TYPEMOUSE       := 0    ;The device is a mouse.
-RIM_TYPEKEYBOARD    := 1    ;The device is a keyboard.
-RIM_TYPEHID         := 2    ;The device is an Human Interface Device (HID) that is not a keyboard and not a mouse.
+RIM_TYPEMOUSE       := 0    ;The device is a mouse.  
+RIM_TYPEKEYBOARD    := 1    ;The device is a keyboard.  
+RIM_TYPEHID         := 2    ;The device is an Human Interface Device (HID) that is not a keyboard and not a mouse.  
 
 ;Different values wParam can take on during a WM_INPUT message
 RIM_INPUT       := 0    ;Input occurred while the application was in the foreground. The application must call
-                        ;DefWindowProc so the system can perform cleanup.
+                        ;DefWindowProc so the system can perform cleanup.  
 RIM_INPUTSINK   := 1    ;Input occurred while the application was not in the foreground. The application must call
-                        ;DefWindowProc so the system can perform the cleanup.
+                        ;DefWindowProc so the system can perform the cleanup.  
 
 ;Flag for the II_KBD_MAKECODE member in the event of a keyboard overrun
-KEYBOARD_OVERRUN_MAKE_CODE  := 0xFF
+KEYBOARD_OVERRUN_MAKE_CODE  := 0xFF  
