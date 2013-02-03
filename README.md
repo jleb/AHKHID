@@ -16,3 +16,5 @@ connected to your computer
 * [Example 2](examples/example_2.ahk) allows you to register for input from any
 HID device and display the incoming data
 * [Example 3](examples/example_3.ahk) shows how the mouse can be registered
+
+[Documentation](documentation.md)
