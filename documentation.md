@@ -5,8 +5,7 @@ This document contains all the information you need to use it.
 
 ## Table of Contents ##
 
-[How do I map buttons on my keyboard/mouse/device?](#how-do-i-map-buttons-on-my
--keyboardmousedevice)
+[How do I map buttons on my keyboard/mouse/device?](#how-do-i-map-buttons-on-my-keyboardmousedevice)
 
 Reference
 * [Function List](#function-list)
