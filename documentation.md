@@ -11,8 +11,7 @@ Reference
 * [Function List](#function-list)
 * [Flags for HID_GetDevInfo()](#flags-for-hid_getdevinfo)
 * [Flags for HID_GetInputInfo()](#flags-for-hid_getinputinfo)
-* [Flags for HID_AddRegister() or HID_Register()](#flags-for-hid_addregister-or
--hid_register)
+* [Flags for HID_AddRegister() or HID_Register()](#flags-for-hid_addregister-or-hid_register)
 * Raw input flags
   * [Interpreting II_MSE_FLAGS](#interpreting-ii_mse_flags)
   * [Interpreting II_MSE_BUTTONFLAGS](#interpreting-ii_mse_buttonflags)
