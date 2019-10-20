@@ -54,6 +54,7 @@ Gui, Add, ListBox, x6 y296 w650 h320 vlbxInput hwndhlbxInput glbxInput_Event,
 GuiHandle := WinExist()
 
 ;Set up the constants
+#include AHKHID.ahk
 AHKHID_UseConstants()
 
 ;Intercept WM_INPUT
