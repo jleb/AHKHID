@@ -10,6 +10,8 @@
     2. Press Ctrl+c on a selected item to copy its name.
 */
 
+#include AHKHID.ahk
+
 ;Check if the OS is Windows Vista or higher
 bVista := (DllCall("GetVersion") & 0xFF >= 6)
 
