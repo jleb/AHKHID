@@ -18,6 +18,8 @@
     Then press Add and then Call to register.
 */
 
+#include AHKHID.ahk
+
 ;Check if the OS is Windows Vista or higher
 bVista := (DllCall("GetVersion") & 0xFF >= 6)
 
