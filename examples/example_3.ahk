@@ -12,6 +12,7 @@
     4. Doubleclick any of the listboxes to clear.
     5. Press Unregister (or Alt+u) to stop monitoring the mouse.
 */
+#include ../AHKHID.ahk
 
 ;To make x,y movements look nice
 SetFormat, FloatFast, 3.0
