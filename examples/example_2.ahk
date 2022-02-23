@@ -17,6 +17,7 @@
     For example, if you'd like to register the keyboard and the mouse, put UsagePage 1 and check the flag RIDEV_PAGEONLY.
     Then press Add and then Call to register.
 */
+#include ../AHKHID.ahk
 
 ;Check if the OS is Windows Vista or higher
 bVista := (DllCall("GetVersion") & 0xFF >= 6)
