@@ -4,8 +4,7 @@ AHKHID - An AHK implementation of the HID functions
 [AHKHID](AHKHID.ahk) allows you to easily interface with HID devices (such as
 keyboards, mice, joysticks, etc...) in your AHK code without having to resort to
 interacting with the raw input API of Windows. The AutoHotkey forum thread is
-[here](http://www.autohotkey.com/board/topic/38015-ahkhid-an-ahk-implementation-
-of-the-hid-functions/).
+[here](http://www.autohotkey.com/board/topic/38015-ahkhid-an-ahk-implementation-of-the-hid-functions/).
 
 All the API calls that AHKHID wraps can be found here:  
 http://msdn.microsoft.com/en-us/library/ms645543.aspx
